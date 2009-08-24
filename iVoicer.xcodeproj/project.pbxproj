@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
+		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		5FD7217B1043044100EB9015 /* ApplicationController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721751043044100EB9015 /* ApplicationController.rb */; };
+		5FD7217C1043044100EB9015 /* PrefsSettingsViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721761043044100EB9015 /* PrefsSettingsViewController.rb */; };
+		5FD7217D1043044100EB9015 /* PreferencesController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721771043044100EB9015 /* PreferencesController.rb */; };
+		5FD7217E1043044100EB9015 /* PrefsAccountsViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721781043044100EB9015 /* PrefsAccountsViewController.rb */; };
+		5FD7217F1043044100EB9015 /* AccountDetailViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721791043044100EB9015 /* AccountDetailViewController.rb */; };
+		5FD721801043044100EB9015 /* SearchViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD7217A1043044100EB9015 /* SearchViewController.rb */; };
+		5FD721821043044A00EB9015 /* Security.bridgesupport in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721811043044A00EB9015 /* Security.bridgesupport */; };
+		5FD7218A1043046800EB9015 /* Growl.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721831043046800EB9015 /* Growl.rb */; };
+		5FD7218B1043046800EB9015 /* Sound.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721841043046800EB9015 /* Sound.rb */; };
+		5FD7218C1043046800EB9015 /* Preferences.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721851043046800EB9015 /* Preferences.rb */; };
+		5FD7218D1043046800EB9015 /* Keychain.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721861043046800EB9015 /* Keychain.rb */; };
+		5FD7218E1043046800EB9015 /* Accounts.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721871043046800EB9015 /* Accounts.rb */; };
+		5FD7218F1043046800EB9015 /* StartupItems.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721881043046800EB9015 /* StartupItems.rb */; };
+		5FD721901043046800EB9015 /* Person.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721891043046800EB9015 /* Person.rb */; };
+		5FD721951043047800EB9015 /* AccountDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721911043047800EB9015 /* AccountDetail.xib */; };
+		5FD721961043047800EB9015 /* PreferencesAccounts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721921043047800EB9015 /* PreferencesAccounts.xib */; };
+		5FD721971043047800EB9015 /* PreferencesSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721931043047800EB9015 /* PreferencesSettings.xib */; };
+		5FD721981043047800EB9015 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721941043047800EB9015 /* SearchView.xib */; };
+		5FD7219A1043048800EB9015 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD721991043048800EB9015 /* AddressBook.framework */; };
+		5FD7219C1043049600EB9015 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7219B1043049500EB9015 /* Security.framework */; };
+		5FD7219E104304A000EB9015 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7219D104304A000EB9015 /* Sparkle.framework */; };
+		5FD721A0104304A900EB9015 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 5FD7219F104304A900EB9015 /* Credits.html */; };
+		5FD721A3104304BE00EB9015 /* menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721A2104304BE00EB9015 /* menu.tiff */; };
+		5FD721B01043112500EB9015 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FD7219D104304A000EB9015 /* Sparkle.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FD721AF1043112300EB9015 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5FD721B01043112500EB9015 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDCA7120ACC9A6100E082CE /* iVoicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVoicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD721751043044100EB9015 /* ApplicationController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationController.rb; sourceTree = "<group>"; };
+		5FD721761043044100EB9015 /* PrefsSettingsViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PrefsSettingsViewController.rb; sourceTree = "<group>"; };
+		5FD721771043044100EB9015 /* PreferencesController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesController.rb; sourceTree = "<group>"; };
+		5FD721781043044100EB9015 /* PrefsAccountsViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PrefsAccountsViewController.rb; sourceTree = "<group>"; };
+		5FD721791043044100EB9015 /* AccountDetailViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AccountDetailViewController.rb; sourceTree = "<group>"; };
+		5FD7217A1043044100EB9015 /* SearchViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SearchViewController.rb; sourceTree = "<group>"; };
+		5FD721811043044A00EB9015 /* Security.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Security.bridgesupport; sourceTree = "<group>"; };
+		5FD721831043046800EB9015 /* Growl.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Growl.rb; sourceTree = "<group>"; };
+		5FD721841043046800EB9015 /* Sound.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Sound.rb; sourceTree = "<group>"; };
+		5FD721851043046800EB9015 /* Preferences.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Preferences.rb; sourceTree = "<group>"; };
+		5FD721861043046800EB9015 /* Keychain.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Keychain.rb; sourceTree = "<group>"; };
+		5FD721871043046800EB9015 /* Accounts.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Accounts.rb; sourceTree = "<group>"; };
+		5FD721881043046800EB9015 /* StartupItems.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StartupItems.rb; sourceTree = "<group>"; };
+		5FD721891043046800EB9015 /* Person.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Person.rb; sourceTree = "<group>"; };
+		5FD721911043047800EB9015 /* AccountDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetail.xib; sourceTree = "<group>"; };
+		5FD721921043047800EB9015 /* PreferencesAccounts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesAccounts.xib; sourceTree = "<group>"; };
+		5FD721931043047800EB9015 /* PreferencesSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesSettings.xib; sourceTree = "<group>"; };
+		5FD721941043047800EB9015 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		5FD721991043048800EB9015 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		5FD7219B1043049500EB9015 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		5FD7219D104304A000EB9015 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		5FD7219F104304A900EB9015 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		5FD721A2104304BE00EB9015 /* menu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menu.tiff; sourceTree = "<group>"; };
+		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
+		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DDCA70B0ACC9A6100E082CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */,
+				4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */,
+				5FD7219A1043048800EB9015 /* AddressBook.framework in Frameworks */,
+				5FD7219C1043049600EB9015 /* Security.framework in Frameworks */,
+				5FD7219E104304A000EB9015 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5FD721751043044100EB9015 /* ApplicationController.rb */,
+				5FD721761043044100EB9015 /* PrefsSettingsViewController.rb */,
+				5FD721771043044100EB9015 /* PreferencesController.rb */,
+				5FD721781043044100EB9015 /* PrefsAccountsViewController.rb */,
+				5FD721791043044100EB9015 /* AccountDetailViewController.rb */,
+				5FD7217A1043044100EB9015 /* SearchViewController.rb */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FD7219D104304A000EB9015 /* Sparkle.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDCA7120ACC9A6100E082CE /* iVoicer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* iVoicer */ = {
+			isa = PBXGroup;
+			children = (
+				5FD721721043043200EB9015 /* Classes */,
+				080E96DDFE201D6D7F000001 /* Controllers */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DDCA7110ACC9A6100E082CE /* Info.plist */,
+			);
+			name = iVoicer;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FD721A2104304BE00EB9015 /* menu.tiff */,
+				5FD7219F104304A900EB9015 /* Credits.html */,
+				5FD721911043047800EB9015 /* AccountDetail.xib */,
+				5FD721921043047800EB9015 /* PreferencesAccounts.xib */,
+				5FD721931043047800EB9015 /* PreferencesSettings.xib */,
+				5FD721941043047800EB9015 /* SearchView.xib */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FD7219B1043049500EB9015 /* Security.framework */,
+				5FD721991043048800EB9015 /* AddressBook.framework */,
+				5FD721811043044A00EB9015 /* Security.bridgesupport */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FD721721043043200EB9015 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5FD721831043046800EB9015 /* Growl.rb */,
+				5FD721841043046800EB9015 /* Sound.rb */,
+				5FD721851043046800EB9015 /* Preferences.rb */,
+				5FD721861043046800EB9015 /* Keychain.rb */,
+				5FD721871043046800EB9015 /* Accounts.rb */,
+				5FD721881043046800EB9015 /* StartupItems.rb */,
+				5FD721891043046800EB9015 /* Person.rb */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DDCA7040ACC9A6100E082CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DDCA7030ACC9A6100E082CE /* iVoicer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "iVoicer" */;
+			buildPhases = (
+				4DDCA7040ACC9A6100E082CE /* Headers */,
+				4DDCA7050ACC9A6100E082CE /* Resources */,
+				4DDCA7090ACC9A6100E082CE /* Sources */,
+				4DDCA70B0ACC9A6100E082CE /* Frameworks */,
+				5FD721AF1043112300EB9015 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iVoicer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = iVoicer;
+			productReference = 4DDCA7120ACC9A6100E082CE /* iVoicer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "iVoicer" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 0;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* iVoicer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DDCA7030ACC9A6100E082CE /* iVoicer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DDCA7050ACC9A6100E082CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */,
+				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
+				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
+				5FD7217B1043044100EB9015 /* ApplicationController.rb in Resources */,
+				5FD7217C1043044100EB9015 /* PrefsSettingsViewController.rb in Resources */,
+				5FD7217D1043044100EB9015 /* PreferencesController.rb in Resources */,
+				5FD7217E1043044100EB9015 /* PrefsAccountsViewController.rb in Resources */,
+				5FD7217F1043044100EB9015 /* AccountDetailViewController.rb in Resources */,
+				5FD721801043044100EB9015 /* SearchViewController.rb in Resources */,
+				5FD721821043044A00EB9015 /* Security.bridgesupport in Resources */,
+				5FD7218A1043046800EB9015 /* Growl.rb in Resources */,
+				5FD7218B1043046800EB9015 /* Sound.rb in Resources */,
+				5FD7218C1043046800EB9015 /* Preferences.rb in Resources */,
+				5FD7218D1043046800EB9015 /* Keychain.rb in Resources */,
+				5FD7218E1043046800EB9015 /* Accounts.rb in Resources */,
+				5FD7218F1043046800EB9015 /* StartupItems.rb in Resources */,
+				5FD721901043046800EB9015 /* Person.rb in Resources */,
+				5FD721951043047800EB9015 /* AccountDetail.xib in Resources */,
+				5FD721961043047800EB9015 /* PreferencesAccounts.xib in Resources */,
+				5FD721971043047800EB9015 /* PreferencesSettings.xib in Resources */,
+				5FD721981043047800EB9015 /* SearchView.xib in Resources */,
+				5FD721A0104304A900EB9015 /* Credits.html in Resources */,
+				5FD721A3104304BE00EB9015 /* menu.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DDCA7090ACC9A6100E082CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7A7B580ABF745500C2D4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		4D7A7B590ABF745500C2D4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		4DDCA70F0ACC9A6100E082CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = iVoicer;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4DDCA7100ACC9A6100E082CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = iVoicer;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "iVoicer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7A7B580ABF745500C2D4C0 /* Debug */,
+				4D7A7B590ABF745500C2D4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "iVoicer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDCA70F0ACC9A6100E082CE /* Debug */,
+				4DDCA7100ACC9A6100E082CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
