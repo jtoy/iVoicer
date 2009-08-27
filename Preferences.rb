@@ -14,7 +14,6 @@ class Preferences < OSX::NSObject
     super_init
 	defaults = NSUserDefaults.standardUserDefaults
 	@accounts	= NSMutableArray.alloc.init
-	@account = @accounts.first  #even though the backend supports multiple backends, we actually only use 1 account currenty
 
     if archivedAccounts = defaults.objectForKey("Accounts")
 	  @accounts = archivedAccounts.map { |a| NSKeyedUnarchiver.unarchiveObjectWithData(a) }
@@ -22,6 +21,7 @@ class Preferences < OSX::NSObject
     
 	@autoLaunch = StartItems.alloc.init.isSet
 	@showUnreadCount = defaults.boolForKey("ShowUnreadCount")
+	@account = @accounts.first  #even though the backend supports multiple backends, we actually only use 1 account currenty
 
 	self
   end

@@ -6,12 +6,9 @@
 #  Copyright (c) 2009 jtoy.net . All rights reserved.
 #
 
-
 require 'osx/cocoa'
 require 'yaml'
 
-
-include OSX
 OSX.require_framework 'Security'
 OSX.load_bridge_support_file(NSBundle.mainBundle.pathForResource_ofType("Security", "bridgesupport"))
 OSX.ruby_thread_switcher_stop
@@ -26,9 +23,12 @@ class ApplicationController < OSX::NSObject
 	ib_action :showAbout
 	ib_action :goToAccount
 	ib_action :gotoPreferences
+	
 	RESULTS_MENUITEM_POS = 5
+	
 	def awakeFromNib
 	  OSX::NSLog("init")
+
 	  @status_bar = NSStatusBar.systemStatusBar
 	  @status_item = @status_bar.statusItemWithLength(NSVariableStatusItemLength)
 
@@ -52,10 +52,10 @@ class ApplicationController < OSX::NSObject
 	
 	def setTimer
 	  @timer.invalidate if @timer
-	  #TODO: have this use preferences timer
+	  OSX::NSLog("in timer")
 	  if @account
 	    OSX::NSLog("interval is #{@account.interval}")
-		#@timer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats(@account.interval * 60, self, 'checkMessagesByTimer', nil, true)
+		@timer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats(@account.interval * 60, self, 'checkMessagesByTimer', nil, true)
 	  end
 	end
 	
@@ -139,13 +139,15 @@ class ApplicationController < OSX::NSObject
 	def growlNotifierTimedOut_context(sender, context)
 	end
 	
-	def notify(title, desc)
-	  Growl::Notifier.sharedInstance.notify('new_messages', title, desc, :click_context => title)
+	def notify(title, desc,type='new_messages')
+	  Growl::Notifier.sharedInstance.notify(type, title, desc, :click_context => title)
 	end
 	
 	private
 	
 	def populateData
+	  @account = Preferences.sharedInstance.account
+	  OSX::NSLog("account is #{@account}")
 	  if @account && Accounts.gvoice
 	    @selected_phone = Accounts.gvoice.phones.find{|x| x.phone_id == @account.forward_phone_id } || Accounts.gvoice.phones.first
 		OSX::NSLog("selected phone in application is #{@selected_phone} and its phoenNumber is '#{@selected_phone.phoneNumber}'")

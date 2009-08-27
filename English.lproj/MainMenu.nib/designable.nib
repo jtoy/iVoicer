@@ -8,6 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="383"/>
 			<integer value="379"/>
 			<integer value="367"/>
 			<integer value="29"/>
@@ -831,9 +832,10 @@
 				</object>
 			</object>
 			<object class="NSSearchField" id="272705052">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
-				<string key="NSFrame">{{85, 399}, {96, 22}}</string>
+				<string key="NSFrameSize">{96, 22}</string>
+				<reference key="NSSuperview"/>
 				<bool key="NSEnabled">YES</bool>
 				<object class="NSSearchFieldCell" key="NSCell" id="550096300">
 					<int key="NSCellFlags">343014976</int>
@@ -1284,6 +1286,14 @@
 						<reference key="destination" ref="272705052"/>
 					</object>
 					<int key="connectionID">394</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">manualCall:</string>
+						<reference key="source" ref="1052389177"/>
+						<reference key="destination" ref="272705052"/>
+					</object>
+					<int key="connectionID">395</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2118,6 +2128,7 @@
 					<string>377.IBPluginDependency</string>
 					<string>378.IBPluginDependency</string>
 					<string>379.IBPluginDependency</string>
+					<string>383.IBEditorWindowLastContentRect</string>
 					<string>383.IBPluginDependency</string>
 					<string>384.IBPluginDependency</string>
 					<string>389.IBPluginDependency</string>
@@ -2295,8 +2306,8 @@
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{85, 100}, {480, 270}}</string>
-					<string>{{85, 100}, {480, 270}}</string>
+					<string>{{483, 424}, {480, 270}}</string>
+					<string>{{483, 424}, {480, 270}}</string>
 					<reference ref="9"/>
 					<string>{{517, 575}, {480, 270}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2308,6 +2319,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{0, 823}, {96, 22}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2367,7 +2379,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">394</int>
+			<int key="maxID">395</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

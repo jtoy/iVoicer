@@ -13,6 +13,8 @@
 		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		5F7485291045BB240086FA94 /* CachedMessage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5F7485281045BB240086FA94 /* CachedMessage.rb */; };
+		5F7486A0104713250086FA94 /* migrate in Resources */ = {isa = PBXBuildFile; fileRef = 5F74869D104713250086FA94 /* migrate */; };
 		5FD7217B1043044100EB9015 /* ApplicationController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721751043044100EB9015 /* ApplicationController.rb */; };
 		5FD7217C1043044100EB9015 /* PrefsSettingsViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721761043044100EB9015 /* PrefsSettingsViewController.rb */; };
 		5FD7217D1043044100EB9015 /* PreferencesController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721771043044100EB9015 /* PreferencesController.rb */; };
@@ -61,6 +63,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDCA7120ACC9A6100E082CE /* iVoicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVoicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7485281045BB240086FA94 /* CachedMessage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CachedMessage.rb; sourceTree = "<group>"; };
+		5F74869D104713250086FA94 /* migrate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = migrate; sourceTree = "<group>"; };
 		5FD721751043044100EB9015 /* ApplicationController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationController.rb; sourceTree = "<group>"; };
 		5FD721761043044100EB9015 /* PrefsSettingsViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PrefsSettingsViewController.rb; sourceTree = "<group>"; };
 		5FD721771043044100EB9015 /* PreferencesController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesController.rb; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		29B97314FDCFA39411CA2CEA /* iVoicer */ = {
 			isa = PBXGroup;
 			children = (
+				5F74869D104713250086FA94 /* migrate */,
 				5FD721721043043200EB9015 /* Classes */,
 				080E96DDFE201D6D7F000001 /* Controllers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -204,6 +209,7 @@
 				5FD721871043046800EB9015 /* Accounts.rb */,
 				5FD721881043046800EB9015 /* StartupItems.rb */,
 				5FD721891043046800EB9015 /* Person.rb */,
+				5F7485281045BB240086FA94 /* CachedMessage.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 				5FD721981043047800EB9015 /* SearchView.xib in Resources */,
 				5FD721A0104304A900EB9015 /* Credits.html in Resources */,
 				5FD721A3104304BE00EB9015 /* menu.tiff in Resources */,
+				5F7485291045BB240086FA94 /* CachedMessage.rb in Resources */,
+				5F7486A0104713250086FA94 /* migrate in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
