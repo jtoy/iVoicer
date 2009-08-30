@@ -64,9 +64,18 @@ class ApplicationController < OSX::NSObject
 	end
 	
 	def checkMessages
-	  if @account
-		#get new messages,  store each sha1 in history, and only show messages that are in the history
-		notify('test title', 'test description')
+	  if @account 
+		#get all messages,  store each sha1 in history, and only show messages that are in the history
+		smses = Accounts.gvoice.smses
+		new_messages = []
+		smses.each do |sms|
+		  cm = CachedMessage.find(:first,:conditions=> {:message => sms.message,:sha =>sms.sms_id,:sent_at=> sms.sent_at,:from => sms.from})
+		  new_messages << sms if !cm || sms.me?
+		end
+		new_messages.each do |new_message|
+		  cm = CachedMessage.create(:message => new_message.message,:sha =>new_message.sms_id,:sent_at=> new_message.sent_at,:from => new_message.from)
+		  notify(cm.to_title,cm.message) unless new_message.me?
+		end
 	  end
 	end
 	

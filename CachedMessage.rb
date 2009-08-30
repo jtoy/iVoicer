@@ -12,6 +12,10 @@ class CachedMessage < ActiveRecord::Base
   def to_s
     message
   end
+  def to_title
+    "#{from} at #{sent_at}"
+  end
+  
   validates_presence_of :sha,:message,:from,:sent_at
 end
 
