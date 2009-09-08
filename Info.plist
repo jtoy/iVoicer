@@ -26,5 +26,7 @@
 	<string>1.0</string>
 	<key>SUFeedURL</key>
 	<string>http://jtoy.net/ivoicer/appcast.xml</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
