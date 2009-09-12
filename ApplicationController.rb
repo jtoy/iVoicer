@@ -85,8 +85,8 @@ class ApplicationController < OSX::NSObject
 	end
 	
 	def gotoPreferences(sender)
-		NSApplication.sharedApplication.activateIgnoringOtherApps(true)
-		PreferencesController.sharedController.showWindow(sender)
+	  NSApplication.sharedApplication.activateIgnoringOtherApps(true)
+	  PreferencesController.sharedController.showWindow(sender)
 	end
 	
 	def controlTextDidChange(notification)
@@ -117,19 +117,35 @@ class ApplicationController < OSX::NSObject
 	end
 	def call(sender)
 	  OSX::NSLog("we can call #{sender}")
-	  OSX::NSLog("we can object #{sender.representedObject.class}")
 	  Accounts.gvoice.call(sender.representedObject.phone,@selected_phone.phoneNumber)
  	end
 	
+	def sendText(sender)
+	  NSApplication.sharedApplication.activateIgnoringOtherApps(true)
+	  @wc = NewTextViewController.alloc.init
+	  @wc.person = sender.representedObject
+	  OSX::NSLog("sender is #{sender} menu is #{sender.menu} menu.repobject: #{sender.representedObject}")
+	  @wc.showWindow(self)
+	end
+	
 	def	addResultMenuItem(result, pos)
-		  OSX::NSLog("iun menu add with #{result}")
-		
+	  OSX::NSLog("iun menu add with #{result}")
 		#top level menu item for acount
 		item = NSMenuItem.alloc.init
 		item.title = result.to_s
 		item.target = self
 		item.representedObject = result
 		item.action = 'call'
+		
+		submenu = NSMenu.alloc.init
+		textitem = NSMenuItem.alloc.init
+		textitem.title = "Send Text"
+		submenu.addItem textitem
+
+		textitem.target = self
+		textitem.action = 'sendText'
+		textitem.representedObject = result #TODO, remove this duplicate memory using code, we should be able to get the person from the parent item 
+		item.submenu = submenu
 
 		@status_item.menu.insertItem_atIndex(item, pos)
 		
@@ -142,7 +158,7 @@ class ApplicationController < OSX::NSObject
 	
 	# delegate not working if :click_context not provided?
 	def growlNotifierClicked_context(sender, context)
-		openInboxForAccount(context) if context
+	  openInboxForAccount(context) if context
 	end
 
 	def growlNotifierTimedOut_context(sender, context)

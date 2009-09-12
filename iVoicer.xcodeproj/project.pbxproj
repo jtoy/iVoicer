@@ -39,6 +39,9 @@
 		5FD721A0104304A900EB9015 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 5FD7219F104304A900EB9015 /* Credits.html */; };
 		5FD721A3104304BE00EB9015 /* menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5FD721A2104304BE00EB9015 /* menu.tiff */; };
 		5FD721B01043112500EB9015 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FD7219D104304A000EB9015 /* Sparkle.framework */; };
+		5FE1BE1210587CA30067193A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE1BE1110587CA30067193A /* Carbon.framework */; };
+		5FE1BE2F1058B6FB0067193A /* NewTextViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FE1BE2E1058B6FB0067193A /* NewTextViewController.rb */; };
+		5FE1BF82105B1D580067193A /* NewTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FE1BF81105B1D580067193A /* NewTextView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +91,9 @@
 		5FD7219D104304A000EB9015 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		5FD7219F104304A900EB9015 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		5FD721A2104304BE00EB9015 /* menu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menu.tiff; sourceTree = "<group>"; };
+		5FE1BE1110587CA30067193A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		5FE1BE2E1058B6FB0067193A /* NewTextViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NewTextViewController.rb; sourceTree = "<group>"; };
+		5FE1BF81105B1D580067193A /* NewTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTextView.xib; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,7 @@
 				5FD7219A1043048800EB9015 /* AddressBook.framework in Frameworks */,
 				5FD7219C1043049600EB9015 /* Security.framework in Frameworks */,
 				5FD7219E104304A000EB9015 /* Sparkle.framework in Frameworks */,
+				5FE1BE1210587CA30067193A /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +124,7 @@
 				5FD721781043044100EB9015 /* PrefsAccountsViewController.rb */,
 				5FD721791043044100EB9015 /* AccountDetailViewController.rb */,
 				5FD7217A1043044100EB9015 /* SearchViewController.rb */,
+				5FE1BE2E1058B6FB0067193A /* NewTextViewController.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FE1BF81105B1D580067193A /* NewTextView.xib */,
 				5FD721A2104304BE00EB9015 /* menu.tiff */,
 				5FD7219F104304A900EB9015 /* Credits.html */,
 				5FD721911043047800EB9015 /* AccountDetail.xib */,
@@ -190,6 +199,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FE1BE1110587CA30067193A /* Carbon.framework */,
 				5FD7219B1043049500EB9015 /* Security.framework */,
 				5FD721991043048800EB9015 /* AddressBook.framework */,
 				5FD721811043044A00EB9015 /* Security.bridgesupport */,
@@ -294,6 +304,8 @@
 				5FD721A3104304BE00EB9015 /* menu.tiff in Resources */,
 				5F7485291045BB240086FA94 /* CachedMessage.rb in Resources */,
 				5F7486A0104713250086FA94 /* migrate in Resources */,
+				5FE1BE2F1058B6FB0067193A /* NewTextViewController.rb in Resources */,
+				5FE1BF82105B1D580067193A /* NewTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
