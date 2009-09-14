@@ -45,9 +45,10 @@ class ApplicationController < OSX::NSObject
 	
 	def applicationWillTerminate(notification)
 	  NSApp.unregisterHotKey
-
 	end
+	
     def applicationDidReceiveHotKey(sender)
+	OSX::NSLog("i was activated")
       if !NSApp.isActive
         NSApp.activateIgnoringOtherApps(true)
       else

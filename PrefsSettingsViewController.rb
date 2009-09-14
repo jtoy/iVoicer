@@ -13,7 +13,7 @@ class PrefsSettingsViewController <  OSX::NSViewController
 
   ib_outlet :autoLaunch
   ib_outlet :showUnreadCount
-  
+  ib_outlet :hotkey
   ib_action :saveAutoLaunch
   ib_action :saveShowUnreadCount
   
@@ -21,6 +21,18 @@ class PrefsSettingsViewController <  OSX::NSViewController
 	NSLocalizedString("Settings")
   end
   
+  def hotkeyUpdated(hotkey)
+	OSX::NSLog("test in hotkey")
+    if @hotkey.valid?
+      #preferences.general.use_hotkey = true
+      #preferences.general.hotkey_key_code = @hotkey.keyCode
+      #preferences.general.hotkey_modifier_flags = @hotkey.modifierFlags
+      NSApp.registerHotKey_modifierFlags(@hotkey.keyCode, @hotkey.modifierFlags)
+    else
+      #preferences.general.use_hotkey = false
+      NSApp.unregisterHotKey
+    end
+  end
   
   
   def identifier
@@ -34,6 +46,8 @@ class PrefsSettingsViewController <  OSX::NSViewController
 	@autoLaunch.setState(Preferences.sharedInstance.autoLaunch? ? NSOnState : NSOffState)
     @showUnreadCount.setTitle(NSLocalizedString("Show unread count in menu bar"))
     @showUnreadCount.setState(Preferences.sharedInstance.showUnreadCount? ? NSOnState : NSOffState)
+	@hotkey.clearKey
+	@hotkey.delegate = self
   end
   
   def image
