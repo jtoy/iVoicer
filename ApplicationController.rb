@@ -51,6 +51,7 @@ class ApplicationController < OSX::NSObject
 	OSX::NSLog("i was activated")
       if !NSApp.isActive
         NSApp.activateIgnoringOtherApps(true)
+		@status_item.popUpStatusItemMenu @menu
       else
         NSApp.hide(nil)
       end
