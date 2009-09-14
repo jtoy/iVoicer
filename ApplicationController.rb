@@ -43,7 +43,17 @@ class ApplicationController < OSX::NSObject
 	  checkMessages
 	end
 	
+	def applicationWillTerminate(notification)
+	  NSApp.unregisterHotKey
 
+	end
+    def applicationDidReceiveHotKey(sender)
+      if !NSApp.isActive
+        NSApp.activateIgnoringOtherApps(true)
+      else
+        NSApp.hide(nil)
+      end
+    end
 	
 	def goToAccount
 	
@@ -108,8 +118,7 @@ class ApplicationController < OSX::NSObject
 	  end
 	  
 	end
-	
-	
+		
 	def manualCall(sender)
 	  OSX::NSLog("manualcall #{sender.stringValue}")
 	  Accounts.gvoice.call(sender.stringValue.to_s,@selected_phone.phoneNumber)

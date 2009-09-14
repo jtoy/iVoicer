@@ -19,7 +19,7 @@
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>MyApplication</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.rubycocoa.iVoicerApp</string>
 	<key>CFBundleShortVersionString</key>

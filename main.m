@@ -11,5 +11,7 @@
 
 int main(int argc, const char *argv[])
 {
+	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+	[pool release];
     return RBApplicationMain("rb_main.rb", argc, argv);
 }

@@ -42,6 +42,15 @@
 		5FE1BE1210587CA30067193A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE1BE1110587CA30067193A /* Carbon.framework */; };
 		5FE1BE2F1058B6FB0067193A /* NewTextViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FE1BE2E1058B6FB0067193A /* NewTextViewController.rb */; };
 		5FE1BF82105B1D580067193A /* NewTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FE1BF81105B1D580067193A /* NewTextView.xib */; };
+		5FE1C01B105DA2020067193A /* third-party in Resources */ = {isa = PBXBuildFile; fileRef = 5FE1C019105DA2020067193A /* third-party */; };
+		5FE1C02C105DA8B20067193A /* HotKeyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE1C02A105DA8B20067193A /* HotKeyManager.h */; };
+		5FE1C02D105DA8B20067193A /* HotKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE1C02B105DA8B20067193A /* HotKeyManager.m */; };
+		5FE1C036105DAA000067193A /* MyApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE1C034105DAA000067193A /* MyApplication.h */; };
+		5FE1C037105DAA000067193A /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE1C035105DAA000067193A /* MyApplication.m */; };
+		5FE1C23E105DC1080067193A /* KeyRecorderBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE1C23A105DC1080067193A /* KeyRecorderBox.h */; };
+		5FE1C23F105DC1080067193A /* KeyRecorderBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE1C23B105DC1080067193A /* KeyRecorderBox.m */; };
+		5FE1C240105DC1080067193A /* KeyRecorderBoxCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE1C23C105DC1080067193A /* KeyRecorderBoxCell.h */; };
+		5FE1C241105DC1080067193A /* KeyRecorderBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE1C23D105DC1080067193A /* KeyRecorderBoxCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +103,15 @@
 		5FE1BE1110587CA30067193A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		5FE1BE2E1058B6FB0067193A /* NewTextViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NewTextViewController.rb; sourceTree = "<group>"; };
 		5FE1BF81105B1D580067193A /* NewTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTextView.xib; sourceTree = "<group>"; };
+		5FE1C019105DA2020067193A /* third-party */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "third-party"; path = "bundling/third-party"; sourceTree = "<group>"; };
+		5FE1C02A105DA8B20067193A /* HotKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeyManager.h; sourceTree = "<group>"; };
+		5FE1C02B105DA8B20067193A /* HotKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeyManager.m; sourceTree = "<group>"; };
+		5FE1C034105DAA000067193A /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
+		5FE1C035105DAA000067193A /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
+		5FE1C23A105DC1080067193A /* KeyRecorderBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyRecorderBox.h; sourceTree = "<group>"; };
+		5FE1C23B105DC1080067193A /* KeyRecorderBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyRecorderBox.m; sourceTree = "<group>"; };
+		5FE1C23C105DC1080067193A /* KeyRecorderBoxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyRecorderBoxCell.h; sourceTree = "<group>"; };
+		5FE1C23D105DC1080067193A /* KeyRecorderBoxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyRecorderBoxCell.m; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +201,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FE1C019105DA2020067193A /* third-party */,
 				5FE1BF81105B1D580067193A /* NewTextView.xib */,
 				5FD721A2104304BE00EB9015 /* menu.tiff */,
 				5FD7219F104304A900EB9015 /* Credits.html */,
@@ -212,6 +231,10 @@
 		5FD721721043043200EB9015 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5FE1C23A105DC1080067193A /* KeyRecorderBox.h */,
+				5FE1C23B105DC1080067193A /* KeyRecorderBox.m */,
+				5FE1C23C105DC1080067193A /* KeyRecorderBoxCell.h */,
+				5FE1C23D105DC1080067193A /* KeyRecorderBoxCell.m */,
 				5FD721831043046800EB9015 /* Growl.rb */,
 				5FD721841043046800EB9015 /* Sound.rb */,
 				5FD721851043046800EB9015 /* Preferences.rb */,
@@ -220,6 +243,10 @@
 				5FD721881043046800EB9015 /* StartupItems.rb */,
 				5FD721891043046800EB9015 /* Person.rb */,
 				5F7485281045BB240086FA94 /* CachedMessage.rb */,
+				5FE1C02A105DA8B20067193A /* HotKeyManager.h */,
+				5FE1C02B105DA8B20067193A /* HotKeyManager.m */,
+				5FE1C034105DAA000067193A /* MyApplication.h */,
+				5FE1C035105DAA000067193A /* MyApplication.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -231,6 +258,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE1C02C105DA8B20067193A /* HotKeyManager.h in Headers */,
+				5FE1C036105DAA000067193A /* MyApplication.h in Headers */,
+				5FE1C23E105DC1080067193A /* KeyRecorderBox.h in Headers */,
+				5FE1C240105DC1080067193A /* KeyRecorderBoxCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +337,7 @@
 				5F7486A0104713250086FA94 /* migrate in Resources */,
 				5FE1BE2F1058B6FB0067193A /* NewTextViewController.rb in Resources */,
 				5FE1BF82105B1D580067193A /* NewTextView.xib in Resources */,
+				5FE1C01B105DA2020067193A /* third-party in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+				5FE1C02D105DA8B20067193A /* HotKeyManager.m in Sources */,
+				5FE1C037105DAA000067193A /* MyApplication.m in Sources */,
+				5FE1C23F105DC1080067193A /* KeyRecorderBox.m in Sources */,
+				5FE1C241105DC1080067193A /* KeyRecorderBoxCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
