@@ -24,12 +24,12 @@ class PrefsSettingsViewController <  OSX::NSViewController
   def hotkeyUpdated(hotkey)
 	OSX::NSLog("test in hotkey")
     if @hotkey.valid?
-      #preferences.general.use_hotkey = true
-      #preferences.general.hotkey_key_code = @hotkey.keyCode
-      #preferences.general.hotkey_modifier_flags = @hotkey.modifierFlags
+      Preferences.sharedInstance.hotkey_code = @hotkey.keyCode
+      Preferences.sharedInstance.hotkey_modifier = @hotkey.modifierFlags
       NSApp.registerHotKey_modifierFlags(@hotkey.keyCode, @hotkey.modifierFlags)
     else
-      #preferences.general.use_hotkey = false
+	  Preferences.sharedInstance.hotkey_code = nil
+      Preferences.sharedInstance.hotkey_modifier = nil
       NSApp.unregisterHotKey
     end
   end
@@ -46,7 +46,11 @@ class PrefsSettingsViewController <  OSX::NSViewController
 	@autoLaunch.setState(Preferences.sharedInstance.autoLaunch? ? NSOnState : NSOffState)
     @showUnreadCount.setTitle(NSLocalizedString("Show unread count in menu bar"))
     @showUnreadCount.setState(Preferences.sharedInstance.showUnreadCount? ? NSOnState : NSOffState)
-	@hotkey.clearKey
+	if Preferences.sharedInstance.hotkey?
+	  @hotkey.setKeyCode_modifierFlags(Preferences.sharedInstance.hotkey_code,Preferences.sharedInstance.hotkey_modifier)
+	else
+	  @hotkey.clearKey
+	end
 	@hotkey.delegate = self
   end
   

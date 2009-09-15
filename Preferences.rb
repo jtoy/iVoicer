@@ -4,7 +4,7 @@ require 'osx/cocoa'
 # a simple wrapper for preferences values
 class Preferences < OSX::NSObject			
 
-  attr_accessor :accounts, :autoLaunch, :showUnreadCount, :account
+  attr_accessor :accounts, :autoLaunch, :showUnreadCount, :account,:hotkey_code, :hotkey_modifier
   
   def self.sharedInstance
     @instance ||= self.alloc.init
@@ -22,8 +22,15 @@ class Preferences < OSX::NSObject
 	@autoLaunch = StartItems.alloc.init.isSet
 	@showUnreadCount = defaults.boolForKey("ShowUnreadCount")
 	@account = @accounts.first  #even though the backend supports multiple backends, we actually only use 1 account currenty
+    @hotkey_code = defaults.integerForKey("HotKeyCode")
+	@hotkey_modifier = defaults.integerForKey("HotKeyModifier")
 
 	self
+  end
+  
+  #true/false on if we have a hotkey
+  def hotkey?
+    hotkey_code && hotkey_modifier && hotkey_code != 0 && hotkey_modifier != 0
   end
   
   def autoLaunch?
@@ -36,6 +43,15 @@ class Preferences < OSX::NSObject
   
   def showUnreadCount?
     NSUserDefaults.standardUserDefaults.boolForKey("ShowUnreadCount")
+  end
+  
+  def hotkey_modifier=(val)
+    NSUserDefaults.standardUserDefaults.setObject_forKey(val, "HotKeyModifier")
+    NSUserDefaults.standardUserDefaults.synchronize
+  end
+  def hotkey_code=(val)
+  	NSUserDefaults.standardUserDefaults.setObject_forKey(val, "HotKeyCode")
+    NSUserDefaults.standardUserDefaults.synchronize
   end
   
   def showUnreadCount=(val)

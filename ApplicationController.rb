@@ -37,6 +37,10 @@ class ApplicationController < OSX::NSObject
 	  @app_icon = NSImage.imageNamed('menu.tiff')
 	  @status_item.setImage(@app_icon)
 	 
+	  if Preferences.sharedInstance.hotkey?
+	    NSApp.registerHotKey_modifierFlags(Preferences.sharedInstance.hotkey_code,Preferences.sharedInstance.hotkey_modifier)
+	  end
+	 
 	  populateData
 	  registerGrowl
 	  setTimer
